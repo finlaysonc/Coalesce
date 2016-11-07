@@ -56,7 +56,7 @@ namespace IntelliTect.Coalesce.Controllers
             {
                 if (_Logger == null)
                 {
-                    _Logger = HttpContext?.RequestServices.GetService<Logger<BaseApiController<T, TDto, TContext>>>();
+                    _Logger = HttpContext?.RequestServices.GetService<ILogger<BaseApiController<T, TDto, TContext>>>();
                 }
 
                 return _Logger;
